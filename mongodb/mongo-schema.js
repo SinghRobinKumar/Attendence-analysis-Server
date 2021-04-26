@@ -10,9 +10,12 @@ const model = new Schema({
     type: String,
     required: true,
   },
-  isPresent: {
-    type: Boolean,
-  },
+  attendence: [
+    {
+      present: { type: Boolean },
+      date: { type: Date },
+    },
+  ],
 });
 
 module.exports = mongoose.model("Attendence", model);
