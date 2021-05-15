@@ -12,10 +12,35 @@ const model = new Schema({
   },
   attendence: [
     {
-      present: { type: Boolean },
-      date: { type: Date },
+      SemesterName: String,
+      Subjects: [
+        {
+          SubjectName: String,
+          Subject: {
+            week1: [],
+          },
+        },
+        // {
+        //   SubjectName: String,
+        //   Subject: {
+        //     week1: [],
+        //   },
+        // },
+        // {
+        //   SubjectName: String,
+        //   Subject: {
+        //     week1: [],
+        //   },
+        // },
+        // {
+        //   SubjectName: String,
+        //   Subject: {
+        //     week1: [],
+        //   },
+        // },
+      ],
     },
   ],
 });
 
-module.exports = mongoose.model("Attendence", model);
+module.exports = mongoose.model("Test-Attendence", model);
